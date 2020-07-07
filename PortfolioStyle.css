@@ -1,8 +1,18 @@
-
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  font-size: 100%;
+}
 
 .container{
   display:grid;
   height:100vh;
+  width:100vw;
   grid-template-columns: 1fr .3fr;
   grid-template-rows: 0.2fr 1fr 0.8fr;
   grid-template-areas: 
@@ -12,17 +22,53 @@
   font-family:"Imprima"; 
   font-size: 22px;
   font-weight: 800;
-  text-transform: uppercase;
 }
 
+  #intro{
+    padding-left: 2%;
+    color: #FFFFFF;
+  }
+
+  #pitch{
+    padding-left: 20%;
+    color: #FFFFFF;
+  }
+
+  #linkedin{
+    max-width: 8%;
+    height: auto;
+    padding-left: 15%;
+    padding-top: 10%;
+  }
+
+  #twitch{
+    max-width: 10%;
+    height: auto;
+    padding-left: 20%;
+    padding-top: 10%;
+  }
+
+  #github{
+    max-width: 10%;
+    height: auto;
+    padding-left: 20%;
+    padding-top: 10%;
+  }
+
+
+  h1{
+    padding-left: 10%;
+    color: #ffffff;
+  }
+
   nav{
-    background: #011627;
+    background: #33ffbd;
     grid-area: nav;
     width: 100vw;
   }
 
   main{
-    background: #011627;
+    background: #33ffbd;
     grid-area: main;
     width: 100vw; 
   }
@@ -30,10 +76,8 @@
   footer{
     background: #ffffff;
     grid-area: footer;
-    width: 100vw;
+    width: 100vw; 
   }
-
-  
 
   @media only screen and (max-width:550px){
     .container{
