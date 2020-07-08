@@ -1,3 +1,5 @@
+
+
 html,
 body {
   height: 100%;
@@ -19,7 +21,7 @@ body {
   "nav nav"
   "main main"
   "footer footer";
-  font-family:"Imprima"; 
+  font-family: 'Poppins', sans-serif; 
   font-size: 22px;
   font-weight: 800;
 }
@@ -55,6 +57,7 @@ body {
     padding-top: 10%;
   }
 
+  
 
   h1{
     padding-left: 10%;
@@ -77,6 +80,84 @@ body {
     background: #ffffff;
     grid-area: footer;
     width: 100vw; 
+  }
+
+  :root {
+    --border-size: 0.125rem;
+    --duration: 250ms;
+    --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
+    --font-family: monospace;
+    --color-primary: white;
+    --color-secondary: black;
+    --color-tertiary: dodgerblue;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --space: 1rem;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  footer {
+    height: 25vh;
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+    padding: calc(var(--space) * 2);
+    max-width: 700px;
+  }
+  
+  .multi-button {
+    display: flex;
+    width: 100%;
+    box-shadow: var(--shadow) 4px 4px;
+  }
+  
+  .multi-button button {
+    flex-grow: 1;
+    cursor: pointer;
+    position: relative;
+    padding:
+      calc(var(--space) / 1.125)
+      var(--space)
+      var(--space);
+    border: var(--border-size) solid black;
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+    font-size: 1.5rem;
+    font-family: var(--font-family);
+    text-shadow: var(--shadow) 2px 2px;
+    transition: flex-grow var(--duration) var(--ease);
+  }
+  
+  .multi-button button + button {
+    border-left: var(--border-size) solid black;
+    margin-left: calc(var(--border-size) * -1);
+  }
+  
+  .multi-button button:hover,
+  .multi-button button:focus {
+    flex-grow: 2;
+    color: white;
+    outline: none;
+    text-shadow: none;
+    background-color: var(--color-secondary);
+  }
+  
+  .multi-button button:focus {
+    outline: var(--border-size) dashed var(--color-primary);
+    outline-offset: calc(var(--border-size) * -3);
+  }
+  
+  .multi-button:hover button:focus:not(:hover) {
+    flex-grow: 1;
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+    outline-color: var(--color-tertiary);
+  }
+  
+  .multi-button button:active {
+    transform: translateY(var(--border-size));
   }
 
   @media only screen and (max-width:550px){

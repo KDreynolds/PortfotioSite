@@ -9,7 +9,7 @@
         <title>KyleReynolds.Dev</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="./PortfolioStyle.css" href='https://fonts.googleapis.com/css?family=Imprima' type="text/css" rel="stylesheet">
+        <link href="./PortfolioStyle.css" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" type="text/css" rel="stylesheet">
     </head>
     <div class="container">
         <nav></nav>
@@ -22,15 +22,22 @@
 
         </main>
         <footer>
-            <a href="https://www.linkedin.com/in/kyle-reynolds-08b52094s">
-                <img id="linkedin" src="./linkedin.png">
-            </a>
-            <a href="https://www.twitch.tv/freyn0lds">
-                <img id="twitch" src="./twitch.png">
-            </a>  
-            <a href="https://github.com/KDreynolds">
-                <img id="github"src="./git.png">
-            </a>    
+            <div class="multi-button">
+                <button onclick="linkedFun()">LinkedIn</button>
+                <button onclick="gitFun()">GitHub</button>
+                <button onclick="twitchFun()">Twitch</button>
+                <script>
+                    function linkedFun() {
+                        window.open("https://www.linkedin.com/in/kyle-reynolds-08b52094s");
+                    }
+                    function gitFun() {
+                        window.open("https://github.com/KDreynolds");
+                    }
+                    function twitchFun() {
+                        window.open("https://www.twitch.tv/freyn0lds");
+                    }
+                </script>
+              </div>      
         </footer>
     </div>
     <body>
