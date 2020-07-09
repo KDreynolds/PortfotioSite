@@ -27,12 +27,10 @@ body {
 }
 
   #intro{
-    padding-left: 2%;
     color: #FFFFFF;
   }
 
   #pitch{
-    padding-left: 20%;
     color: #FFFFFF;
   }
 
@@ -60,20 +58,21 @@ body {
   
 
   h1{
-    padding-left: 10%;
     color: #ffffff;
   }
 
   nav{
-    background: #33ffbd;
+    background: #F0B67F;
     grid-area: nav;
     width: 100vw;
+    text-align: center;
   }
 
   main{
-    background: #33ffbd;
+    background: #F0B67F;
     grid-area: main;
     width: 100vw; 
+    text-align: center;
   }
 
   footer{
@@ -158,6 +157,26 @@ body {
   
   .multi-button button:active {
     transform: translateY(var(--border-size));
+  }
+
+  h1 span {
+    
+    margin: 11px 0 17px 0;
+    color: #f1ebe5;
+    text-shadow: 0 13.36px 8.896px #c4b59d,0 -2px 1px #fff;
+    letter-spacing: 0px;
+  }
+
+  p span {
+    
+    margin: 11px 0 17px 0;
+    color: #f1ebe5;
+    text-shadow: 0 13.36px 8.896px #c4b59d,0 -2px 1px #fff;
+    letter-spacing: 0px;
+  }
+
+  .work{
+    padding-top: 15%;
   }
 
   @media only screen and (max-width:550px){
